@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import NavbarBanner from "./components/Navbar/NavbarBanner";
 import Hero from "./components/Hero/Hero";
@@ -10,6 +11,11 @@ import Banner from "./components/Banner/Banner";
 import SubjectCard from "./components/SubjectCard/SubjectCard";
 import Testimonial from "./components/Testimonial/Testimonial";
 import Footer from "./components/Footer/Footer";
+
+// Import Authentication Pages
+import Signup from "./pages/auth/Signup/Signup";
+import Login from "./pages/auth/Login/Login";
+import ForgotPassword from "./pages/auth/ForgotPassword/ForgotPassword";
 
 const BannerData = {
   image: Img1,
@@ -31,18 +37,35 @@ const BannerData2 = {
 
 const App = () => {
   return (
-    <main className="overflow-x-hidden">      
-      <Navbar />
-      <NavbarBanner />      
-      <Hero />
-      <NumberCounter />
-      <WhyChooseUs />
-      <Banner {...BannerData} />
-      <Banner {...BannerData2} reverse={true} />
-      <SubjectCard />
-      <Testimonial />
-      <Footer />
-    </main>
+    <Router>
+      <main className="overflow-x-hidden">
+        <Navbar />
+        <Routes>
+          {/* Landing Page */}
+          <Route
+            path="/"
+            element={
+              <>
+                <NavbarBanner />
+                <Hero />                
+                <NumberCounter />
+                <WhyChooseUs />
+                <Banner {...BannerData} />
+                <Banner {...BannerData2} reverse={true} />
+                <SubjectCard />
+                <Testimonial />
+                <Footer />
+              </>
+            }
+          />
+
+          {/* Authentication Pages */}
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+        </Routes>
+      </main>
+    </Router>
   );
 };
 

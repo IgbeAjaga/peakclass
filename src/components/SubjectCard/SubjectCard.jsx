@@ -67,7 +67,7 @@ const SubjectCard = () => {
       <div className="container py-14 md:py-24">
         {/* header section */}
         <div className="space-y-4 p-6 text-center max-w-[600px] mx-auto mb-5">
-          <h1 className="uppercase font-semibold text-blue-500">
+          <h1 className="uppercase font-semibold text-purple-600">
             Our subjects
           </h1>
           <p className="font-semibold text-3xl">

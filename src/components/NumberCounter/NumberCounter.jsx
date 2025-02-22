@@ -3,7 +3,7 @@ import CountUp from "react-countup";
 
 const NumberCounter = () => {
   return (
-    <div className="bg-secondary text-white py-16">
+    <div className="bg-purple-600 text-white py-16">
       <div className="container  mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6">
         {[
           { end: 50, label: "Expert Tutors", suffix: "+" },

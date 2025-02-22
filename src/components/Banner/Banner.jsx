@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom"; // ✅ Import Link for navigation
 import { motion } from "framer-motion";
 import { SlideUp } from "../../utility/animation";
 
-const Banner = ({ image, title, subtitle, link, tag, reverse }) => {
+const Banner = ({ image, title, subtitle, tag, reverse }) => {
   return (
     <div className="bg-[#f9f9f9] pb-14">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 space-y-6 md:space-y-0">
-          {/* banner Image section */}
+          {/* Banner Image section */}
           <div
             className={`flex justify-start items-center ${
               reverse && "md:order-last md:justify-end"
@@ -18,7 +19,7 @@ const Banner = ({ image, title, subtitle, link, tag, reverse }) => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ type: "spring", stiffness: 100, delay: 0.2 }}
               src={image}
-              alt=""
+              alt="Banner"
               className="w-[400px] h-full object-cover"
             />
           </div>
@@ -28,7 +29,7 @@ const Banner = ({ image, title, subtitle, link, tag, reverse }) => {
               variants={SlideUp(0.5)}
               initial="hidden"
               whileInView={"visible"}
-              className="text-sm text-blue-600 font-semibold capitalize"
+              className="text-sm text-purple-600 font-semibold capitalize"
             >
               {tag}
             </motion.p>
@@ -54,7 +55,10 @@ const Banner = ({ image, title, subtitle, link, tag, reverse }) => {
               whileInView={"visible"}
               className="flex justify-center md:justify-start"
             >
-              <button className="primary-btn !mt-5">Get Started</button>
+              {/* ✅ "Join Us" button links to the signup page */}
+              <Link to="/signup" className="primary-btn !mt-5">
+                Join Us
+              </Link>
             </motion.div>
           </div>
         </div>

@@ -4,28 +4,28 @@ import Slider from "react-slick";
 const TestimonialsData = [
   {
     id: 1,
-    name: "John Doe",
+    name: "Elizabeth Okoh",
     text: "With Peak-Class, I finally understood tricky concepts. The detailed explanations made learning fun and effective!",
-    img: "https://picsum.photos/101/101",
+    img: "https://picsum.photos/104/104",
     delay: 0.2,
   },
   {
     id: 2,
-    name: "Steve Smith",
+    name: "Innocent Okoro",
     text: "I love how Peak-Class breaks down complex topics. Their guides helped me gain confidence for my NECO exams!",
     img: "https://picsum.photos/102/102",
     delay: 0.5,
   },
   {
     id: 3,
-    name: "Kristen",
+    name: "Chris Ford",
     text: "Thanks to Peak-Class, I passed my WAEC with flying colors. The resources are top-notch and super easy to follow!",
-    img: "https://picsum.photos/104/104",
+    img: "https://picsum.photos/101/101",
     delay: 0.8,
   },
   {
     id: 5,
-    name: "Ariana",
+    name: "Harry James",
     text: "Peak-Class transformed my exam preparation! The video solutions and study guides made tough subjects easy to understand.",
     img: "https://picsum.photos/103/103",
     delay: 1.1,
@@ -75,7 +75,7 @@ const Testimonial = () => {
       <div className="container">
         {/* header section */}
         <div className="space-y-4 p-6 text-center max-w-[600px] mx-auto mb-6">
-          <h1 className="uppercase font-semibold text-blue-600">
+          <h1 className="uppercase font-semibold text-purple-600">
             OUR TESTIMONIALS
           </h1>
           <p className="font-semibold text-3xl ">
